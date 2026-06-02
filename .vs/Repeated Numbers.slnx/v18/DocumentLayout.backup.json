@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\",
+  "WorkspaceRootPath": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|solutionrelative:frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|d:\\my projects\\c#_ projects\\real-project\\repeated numbers\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|solutionrelative:frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|d:\\my projects\\c#_ projects\\real-project\\repeated numbers\\clsrepteadnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\clsrepteadnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|solutionrelative:clsrepteadnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|d:\\my projects\\c#_ projects\\real-project\\repeated-numbers\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE958377-5AE3-489D-AA7A-DFD48A927C8B}|Repeated Numbers.csproj|solutionrelative:frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,24 +34,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "clsRepteadNumber.cs",
-              "DocumentMoniker": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\clsRepteadNumber.cs",
+              "DocumentMoniker": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\clsRepteadNumber.cs",
               "RelativeDocumentMoniker": "clsRepteadNumber.cs",
-              "ToolTip": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\clsRepteadNumber.cs",
+              "ToolTip": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\clsRepteadNumber.cs",
               "RelativeToolTip": "clsRepteadNumber.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA4wBgAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T11:45:33.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmGame.cs [Design]",
-              "DocumentMoniker": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\frmGame.cs",
+              "DocumentMoniker": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\frmGame.cs",
               "RelativeDocumentMoniker": "frmGame.cs",
-              "ToolTip": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\frmGame.cs [Design]",
+              "ToolTip": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\frmGame.cs [Design]",
               "RelativeToolTip": "frmGame.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T22:44:21.433Z",
@@ -59,13 +59,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmGame.cs",
-              "DocumentMoniker": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\frmGame.cs",
+              "DocumentMoniker": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\frmGame.cs",
               "RelativeDocumentMoniker": "frmGame.cs",
-              "ToolTip": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated Numbers\\frmGame.cs",
+              "ToolTip": "D:\\my projects\\C#_ projects\\Real-Project\\Repeated-Numbers\\frmGame.cs",
               "RelativeToolTip": "frmGame.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAArwGgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T22:41:16.847Z",
               "EditorCaption": ""

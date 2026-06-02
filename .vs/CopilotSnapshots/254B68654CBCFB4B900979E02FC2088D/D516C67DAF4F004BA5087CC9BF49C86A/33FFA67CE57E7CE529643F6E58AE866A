@@ -12,27 +12,28 @@ namespace Repeated_Number
         // ده الرقم المستهدف
         public byte targetNumber { get; private set; } = 0;
         
-        // Number of rounds the user chose
+        // عدد الRound ال User اختارها
         public byte totalRounds { get; private set; }
 
-        // Timer starting value
+        // الTimer بيبدء من كام
         public byte timerCountdown = 10;
 
+        // الRound الحالي
         public byte currentRound { get; private set; } = 1;
 
-        // How many times the target number is repeated
+        // عدد الرقم المستهدف متكرر كام مرة
         public byte targetNumberCount { get; private set; } = 0;
         
-        // Count of correct answers entered by the user
+        // لعد الاجابات الصحيحة ال ادخلها الUser
         public byte correctAnswersCount { get; private set; } = 0;
 
-        // Count of wrong answers by the user
+        // لعد الاجابات الخاطئة الخاصة بالUser
         public byte wrongAnswersCount { get; private set; } = 0;
 
-        // Determine whether the user has finished (game over)
+        // هنعرف الUser خلص ال ولا لا
         public bool IsGameOver => currentRound > totalRounds;
 
-        // Count the target number to use in comparisons
+        // بنعد الرقم الtarget علشان نعرف نعمل بيه مقارنات
         private byte _CounterNumberTarget(List<byte> Nums)
         {
             byte Counter = 0;
@@ -50,37 +51,33 @@ namespace Repeated_Number
         {
             var random = new Random();
             
-            // Choose the target number randomly from the button numbers
+            // بنشوف الTarget Number من عشوائياً من بين ارقام الButton
             targetNumber = ButtonNumber[random.Next(0, ButtonNumber.Count)];
 
-            // Count how many times the target number is repeated
+            // بنعد الرقم المستهدف متكرر كام مرة
             targetNumberCount = _CounterNumberTarget(ButtonNumber);
         }
         public bool SubmitAnswer(byte userAnswer)
         {
-            // Check if the target number count equals the user's input
+            // بنشوف هل الTarget NumberCount مساوي للدخله الUser
             bool isCorrect = userAnswer == targetNumberCount;
 
             if (isCorrect)
             {
                 correctAnswersCount++;
                 timerCountdown = 10;
-            } 
-            /*
-            We start increasing the number if it is the answer,
-            and reset the counter again to move to the next round
-            */
+            } // بنبدء نزود الرقم لو الاجابة ونرجع العداد تاني علشان ينقل للRound ال بعده
             else
             {
                 wrongAnswersCount++;
                 timerCountdown = 10;
             }
 
-            currentRound++; // Each time this method is called we advance to the next round
+            currentRound++; // كل مرة بنستدعي فيها الدالة بنبدء نعد Round جديدة
             return isCorrect;
         }
 
-        // Called when time Round out
+        // دي بتستدعا عند خروج الوقت 
         public void RegisterTimeOut()
         {
             timerCountdown = 10;

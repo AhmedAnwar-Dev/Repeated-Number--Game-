@@ -17,7 +17,7 @@ namespace Repeated_Numbers
         //Connects business logic with the UI
         private clsRepteadNumber _GameRep;
 
-        // This list stores all buttons used by the user to guess the repeated number
+        //This list stores all buttons used by the user to guess the repeated number
         private List<Button> _numberButtons = new List<Button>();
 
         //A reusable random number generator to be called from anywhere
@@ -25,7 +25,7 @@ namespace Repeated_Numbers
         public frmGame(byte Rounds)
         {
             InitializeComponent();
-            // Store all number buttons into the _numberButtons list
+            //Stores all buttons inside _numberButtons
             _LoadNumberButtonsIntoList();
 
             //Initializes the class and sets the total rounds the player wants to play
@@ -45,12 +45,12 @@ namespace Repeated_Numbers
         }
         private List<byte> _PopulateButtonsWithRandomNumbers()
         {
-            // Populate buttons with random numbers to bind the UI to the game logic
+            // هذا لوضع ارقام العشوائيه في الButton وهذا علشان اربط الLogic بالUi
             List<byte> EachNumberInButton = new List<byte>();
 
             foreach (Button btn in _numberButtons)
             {
-                // Create a random number for each button
+                // Create Random Number For Each Number
                 byte RandomNumber = Convert.ToByte(_rnd.Next(0, 9));
 
                 btn.Text = RandomNumber.ToString();
@@ -61,34 +61,34 @@ namespace Repeated_Numbers
             return EachNumberInButton;
         }
 
-        // Called each round to refresh the button numbers, target number and related UI
+        // كل Round بستدعيها علشان تجدد الارقام والTarget Number وباقي الارقام
         private void _InitializeRound()
         {
-            // SetupNewRound logic is implemented in clsRepteadNumber
+            // دي شرحها في الclsRepteadNumber
             _GameRep.SetupNewRound(_PopulateButtonsWithRandomNumbers());
 
-            // Display the number the user must find
+            //بنحدد الرقم الuser هيدور عليه
             btnNumberRepeat.Text = _GameRep.targetNumber.ToString();
 
-            // Update the UI with the current round and total rounds
+            //بنحدد انهي Round احنا فيه دلوقتي للUser
             btnRoundNumber.Text = "Round\n" + _GameRep.currentRound + " \\ " + _GameRep.totalRounds.ToString();
         }
 
-        // Show that the current or previous answer was wrong
+        // لإظهار ان الاجابة الحالية او الفائتة خطأ
         private void _ApplyWrongAnswerStyle()
         {
             lblIsCorrect.ForeColor = Color.Red;
             lblIsCorrect.Text = "Wrong?";
             lblIsCorrect.Visible = true;
         }
-        // Show that the current or previous answer was correct
+        // لإظهار ان الاجابة الحالية او الفائتة صحيحة
         private void _ApplyCorrectAnswerStyle()
         {
             lblIsCorrect.ForeColor = Color.Green;
             lblIsCorrect.Text = "Correct!";
             lblIsCorrect.Visible = true;
         }
-        // Open the end-game form and pass the final results
+        // لإرسال النتائج النهائية الى اخر Form
         private void _GameEnd()
         {
             Form frmGameEnd = new frmGameEnd(_GameRep.correctAnswersCount, _GameRep.wrongAnswersCount, _GameRep.totalRounds);
@@ -96,7 +96,7 @@ namespace Repeated_Numbers
         }
         private void tmrTime_Tick(object sender, EventArgs e)
         {
-            // Timer value shown to the user
+            // ده الTimer بيظهر على الشاشة للUser
             lblRoundTime.Text = _GameRep.timerCountdown.ToString();
 
             if (_GameRep.timerCountdown == 0)
@@ -105,7 +105,7 @@ namespace Repeated_Numbers
                 _ApplyWrongAnswerStyle();
                 _InitializeRound();
             }
-            // If the game is over after a timeout reset, stop the timer and end the game
+            // اذا كان الوقت خلص والجيم خلص هننهي العبة
             if (_GameRep.IsGameOver && _GameRep.timerCountdown == 10)
             {
                 tmrTime.Enabled = false;
@@ -115,11 +115,11 @@ namespace Repeated_Numbers
         }
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Read the user's final answer and convert it to byte for comparison
+            // ده احنا بناخد الUserAnswer النهائي وبنحوله لbyte علشان نعمل بيه مقارنات
             byte UserAnswer = Convert.ToByte(mtbNumberRepeted.Text);
             bool IsAnswerTrue = _GameRep.SubmitAnswer(UserAnswer);
 
-            // If the user submitted an empty value, show an error message
+            // لو الUser حاول يدخل الرقم فاضي هيظهر الMessageBox دي
             if (string.IsNullOrEmpty(mtbNumberRepeted.Text))
             {
                 MessageBox.Show
@@ -148,7 +148,7 @@ namespace Repeated_Numbers
             }
 
             _InitializeRound();
-            // Clearing and focusing the input improves UX by making it easier for the user to enter the next value
+            //اضافة السطيرين دول بيحسن من الUX علشان سهولة الادخال عند الUser والعب
             mtbNumberRepeted.Clear();
             mtbNumberRepeted.Focus();
         }
@@ -156,10 +156,10 @@ namespace Repeated_Numbers
         {
             mtbNumberRepeted.Focus();
 
-            // Start the timer when the form is created
+            // بنخلي الTimer يبدء ببداية انشاء الForm
             tmrTime.Enabled = true;
             
-            // Initialize the first round on form load
+            //هيبدء ينشئ الRound في بداية ال
             _InitializeRound();
         }
     }
