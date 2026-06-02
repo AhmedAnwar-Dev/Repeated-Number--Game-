@@ -1,0 +1,12 @@
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\bin\Debug\Repeated Numbers.exe.config
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\bin\Debug\Repeated Numbers.exe
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\bin\Debug\Repeated Numbers.pdb
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated Numbers.csproj.AssemblyReference.cache
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated_Numbers.frmGame.resources
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated_Numbers.Properties.Resources.resources
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated Numbers.csproj.GenerateResource.cache
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated Numbers.csproj.CoreCompileInputs.cache
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated Numbers.exe
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated Numbers.pdb
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated_Numbers.frmGameEnd.resources
+D:\my projects\C#_ projects\Real-Project\Repeated Numbers\obj\Debug\Repeated_Numbers.frmStartGame.resources
