@@ -1,4 +1,4 @@
-﻿namespace Repeated_Numbers
+﻿namespace Repeated_Numbers_UI
 {
     partial class frmStartGame
     {

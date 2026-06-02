@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Repeated_Number
+namespace Repeated_Number_Logic
 {
     internal class clsRepteadNumber
     {
-        // ده الرقم المستهدف
+        //Start Varibales
         public byte targetNumber { get; private set; } = 0;
         
         // Number of rounds the user chose
@@ -31,8 +31,10 @@ namespace Repeated_Number
 
         // Determine whether the user has finished (game over)
         public bool IsGameOver => currentRound > totalRounds;
+        //End Varibales
 
-        // Count the target number to use in comparisons
+
+        //Start Functions
         private byte _CounterNumberTarget(List<byte> Nums)
         {
             byte Counter = 0;
@@ -42,7 +44,7 @@ namespace Repeated_Number
                     Counter++;
             }
             return Counter;
-        }
+        }// Count the target number to use in comparisons
 
         public clsRepteadNumber(byte TotalRound) => totalRounds = TotalRound;
 
@@ -80,12 +82,14 @@ namespace Repeated_Number
             return isCorrect;
         }
 
-        // Called when time Round out
+       
         public void RegisterTimeOut()
         {
             timerCountdown = 10;
             wrongAnswersCount++;
             currentRound++;
-        }
+        } // Called when time Round out
+        //End Functions
+
     }
 }

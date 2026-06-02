@@ -1,4 +1,4 @@
-﻿namespace Repeated_Numbers
+﻿namespace Repeated_Numbers_UI
 {
     partial class frmGame
     {
@@ -549,7 +549,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Repeated_Numbers.Properties.Resources.stopwatch1;
+            this.pictureBox1.Image = global::Repeated_Numbers_UI.Properties.Resources.stopwatch1;
             this.pictureBox1.Location = new System.Drawing.Point(-5, 217);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 128);

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Repeated_Numbers.Properties
+namespace Repeated_Numbers_UI.Properties
 {
 
 

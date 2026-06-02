@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Repeated_Numbers
+namespace Repeated_Numbers_UI
 {
     internal static class Program
     {

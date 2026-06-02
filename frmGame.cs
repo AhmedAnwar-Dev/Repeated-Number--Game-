@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Repeated_Number_Logic;
 
-using Repeated_Number;
-
-namespace Repeated_Numbers
+namespace Repeated_Numbers_UI
 {
     public partial class frmGame : Form
     {
+        // Start Game Varibale
+
         //Connects business logic with the UI
         private clsRepteadNumber _GameRep;
 
@@ -22,6 +23,9 @@ namespace Repeated_Numbers
 
         //A reusable random number generator to be called from anywhere
         private Random _rnd = new Random();
+
+        // End Game Varibale
+
         public frmGame(byte Rounds)
         {
             InitializeComponent();
@@ -31,6 +35,8 @@ namespace Repeated_Numbers
             //Initializes the class and sets the total rounds the player wants to play
             _GameRep = new clsRepteadNumber(Rounds);
         }
+
+        // Start Game Function
         private void _LoadNumberButtonsIntoList()
         {
             foreach (Control control in this.Controls)
@@ -60,8 +66,6 @@ namespace Repeated_Numbers
 
             return EachNumberInButton;
         }
-
-        // Called each round to refresh the button numbers, target number and related UI
         private void _InitializeRound()
         {
             // SetupNewRound logic is implemented in clsRepteadNumber
@@ -72,28 +76,33 @@ namespace Repeated_Numbers
 
             // Update the UI with the current round and total rounds
             btnRoundNumber.Text = "Round\n" + _GameRep.currentRound + " \\ " + _GameRep.totalRounds.ToString();
-        }
-
-        // Show that the current or previous answer was wrong
+        } // Called each round to refresh the button numbers, target number and related UI
         private void _ApplyWrongAnswerStyle()
         {
             lblIsCorrect.ForeColor = Color.Red;
             lblIsCorrect.Text = "Wrong?";
             lblIsCorrect.Visible = true;
-        }
-        // Show that the current or previous answer was correct
+        } // Show that the current or previous answer was wrong
         private void _ApplyCorrectAnswerStyle()
         {
             lblIsCorrect.ForeColor = Color.Green;
             lblIsCorrect.Text = "Correct!";
             lblIsCorrect.Visible = true;
-        }
-        // Open the end-game form and pass the final results
+        } // Show that the current or previous answer was correct
+        private void _ApplyTimedOutStyle()
+        {
+            lblIsCorrect.ForeColor = Color.Yellow;
+            lblIsCorrect.Text = "Timed Out!";
+            lblIsCorrect.Visible = true;
+        } // Show that the current or previous answer was Timed Out
         private void _GameEnd()
         {
             Form frmGameEnd = new frmGameEnd(_GameRep.correctAnswersCount, _GameRep.wrongAnswersCount, _GameRep.totalRounds);
             frmGameEnd.ShowDialog();
-        }
+        } // Open the end-game form and pass the final results
+        // End Game Function
+
+        // Start Event Controls
         private void tmrTime_Tick(object sender, EventArgs e)
         {
             // Timer value shown to the user
@@ -102,7 +111,7 @@ namespace Repeated_Numbers
             if (_GameRep.timerCountdown == 0)
             {
                 _GameRep.RegisterTimeOut();
-                _ApplyWrongAnswerStyle();
+                _ApplyTimedOutStyle();
                 _InitializeRound();
             }
             // If the game is over after a timeout reset, stop the timer and end the game
@@ -162,5 +171,7 @@ namespace Repeated_Numbers
             // Initialize the first round on form load
             _InitializeRound();
         }
+        // End Event Controls
+
     }
 }
