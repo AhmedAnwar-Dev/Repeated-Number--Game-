@@ -26,11 +26,15 @@ D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\bin\Debug\Repeated Num
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\bin\Debug\Repeated Numbers.exe
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\bin\Debug\Repeated Numbers.pdb
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.csproj.AssemblyReference.cache
-D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers.frmStartGame.resources
-D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers.frmGame.resources
-D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers.frmGameEnd.resources
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers.Properties.Resources.resources
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.csproj.GenerateResource.cache
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.csproj.CoreCompileInputs.cache
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.exe
 D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.pdb
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers_UI.frmStartGame.resources
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers_UI.frmGame.resources
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated_Numbers_UI.frmGameEnd.resources
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\bin\Debug\Repeated Numbers.exe.manifest
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\bin\Debug\Repeated Numbers.application
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.exe.manifest
+D:\My-Projects\C#_ projects\Real-Project\Repeated-Numbers\obj\Debug\Repeated Numbers.application

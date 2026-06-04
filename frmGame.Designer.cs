@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
             this.label1 = new System.Windows.Forms.Label();
             this.btnRoundNumber = new System.Windows.Forms.Button();
             this.lblRoundTime = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.button27 = new System.Windows.Forms.Button();
             this.lblIsCorrect = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +99,7 @@
             this.lblRoundTime.AutoSize = true;
             this.lblRoundTime.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoundTime.ForeColor = System.Drawing.Color.Blue;
-            this.lblRoundTime.Location = new System.Drawing.Point(70, 272);
+            this.lblRoundTime.Location = new System.Drawing.Point(65, 291);
             this.lblRoundTime.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblRoundTime.Name = "lblRoundTime";
             this.lblRoundTime.Size = new System.Drawing.Size(30, 33);
@@ -549,23 +549,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Repeated_Numbers_UI.Properties.Resources.stopwatch1;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 217);
+            this.pictureBox1.Image = global::Repeated_Numbers.Properties.Resources.stopwatch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 241);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(134, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(228, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Correct!";
             // 
             // frmGame
             // 
@@ -574,7 +564,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(211)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(580, 391);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblRoundTime);
             this.Controls.Add(this.lblIsCorrect);
             this.Controls.Add(this.button23);
@@ -610,10 +599,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmGame";
-            this.Text = "Game";
+            this.Text = "Repeated Numbers Game";
             this.Load += new System.EventHandler(this.frmGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -658,6 +648,5 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Label lblIsCorrect;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
     }
 }

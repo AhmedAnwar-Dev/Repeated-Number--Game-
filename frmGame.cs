@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Repeated_Number_Logic;
+using System.Media;
 
 namespace Repeated_Numbers_UI
 {
@@ -25,7 +26,6 @@ namespace Repeated_Numbers_UI
         private Random _rnd = new Random();
 
         // End Game Varibale
-
         public frmGame(byte Rounds)
         {
             InitializeComponent();
@@ -35,7 +35,6 @@ namespace Repeated_Numbers_UI
             //Initializes the class and sets the total rounds the player wants to play
             _GameRep = new clsRepteadNumber(Rounds);
         }
-
         // Start Game Function
         private void _LoadNumberButtonsIntoList()
         {
@@ -77,23 +76,49 @@ namespace Repeated_Numbers_UI
             // Update the UI with the current round and total rounds
             btnRoundNumber.Text = "Round\n" + _GameRep.currentRound + " \\ " + _GameRep.totalRounds.ToString();
         } // Called each round to refresh the button numbers, target number and related UI
-        private void _ApplyWrongAnswerStyle()
+        private async Task _AwaitLabel()
         {
+            await Task.Delay(1500);
+        }// Call this when I want the label to wait a moment
+        private void WrongAudio()
+        {
+            SoundPlayer Wrong = new SoundPlayer("Wrong.wav");
+            Wrong.Play();
+        }
+        private async void _ApplyWrongAnswerStyle()
+        {
+            WrongAudio();
             lblIsCorrect.ForeColor = Color.Red;
             lblIsCorrect.Text = "Wrong?";
             lblIsCorrect.Visible = true;
+
+            await _AwaitLabel();
+
+            lblIsCorrect.Visible = false;
         } // Show that the current or previous answer was wrong
-        private void _ApplyCorrectAnswerStyle()
+        private async void _ApplyCorrectAnswerStyle()
         {
+            SoundPlayer CorrectAudio = new SoundPlayer("Correct.wav");
+            CorrectAudio.Play();
+
             lblIsCorrect.ForeColor = Color.Green;
             lblIsCorrect.Text = "Correct!";
             lblIsCorrect.Visible = true;
+
+            await _AwaitLabel();
+
+            lblIsCorrect.Visible = false;
         } // Show that the current or previous answer was correct
-        private void _ApplyTimedOutStyle()
+        private async void _ApplyTimedOutStyle()
         {
+            WrongAudio();
             lblIsCorrect.ForeColor = Color.Yellow;
             lblIsCorrect.Text = "Timed Out!";
             lblIsCorrect.Visible = true;
+
+            await _AwaitLabel();
+
+            lblIsCorrect.Visible = false;
         } // Show that the current or previous answer was Timed Out
         private void _GameEnd()
         {
@@ -114,6 +139,7 @@ namespace Repeated_Numbers_UI
                 _ApplyTimedOutStyle();
                 _InitializeRound();
             }
+
             // If the game is over after a timeout reset, stop the timer and end the game
             if (_GameRep.IsGameOver && _GameRep.timerCountdown == 10)
             {
@@ -125,41 +151,50 @@ namespace Repeated_Numbers_UI
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             // Read the user's final answer and convert it to byte for comparison
-            byte UserAnswer = Convert.ToByte(mtbNumberRepeted.Text);
-            bool IsAnswerTrue = _GameRep.SubmitAnswer(UserAnswer);
+            byte UserAnswer;
 
-            // If the user submitted an empty value, show an error message
-            if (string.IsNullOrEmpty(mtbNumberRepeted.Text))
+            byte.TryParse(mtbNumberRepeted.Text, out UserAnswer);
+
+            if (string.IsNullOrEmpty(mtbNumberRepeted.Text) || mtbNumberRepeted.Text == "0")
             {
-                MessageBox.Show
+                tmrTime.Enabled = false;
+                if (MessageBox.Show
                 (
                     "Please Enter Number From 1 To 9",
                     "Number Wrong",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
-                );
-            }
-
-            else if (IsAnswerTrue)
-            {
-                _ApplyCorrectAnswerStyle();
-            }
+                ) == DialogResult.OK)
+                {
+                    tmrTime.Enabled = true;
+                }
+            }// If the user submitted an empty value or 0, show an error message
 
             else
             {
-                _ApplyWrongAnswerStyle();
-            }
-            if (_GameRep.IsGameOver)
-            {
-                tmrTime.Enabled = false;
-                _GameEnd();
-                return;
-            }
+                bool IsAnswerTrue = _GameRep.SubmitAnswer(UserAnswer);
 
-            _InitializeRound();
-            // Clearing and focusing the input improves UX by making it easier for the user to enter the next value
-            mtbNumberRepeted.Clear();
-            mtbNumberRepeted.Focus();
+                if (IsAnswerTrue)
+                {
+                    _ApplyCorrectAnswerStyle();
+                }
+
+                else
+                {
+                    _ApplyWrongAnswerStyle();
+                }
+                if (_GameRep.IsGameOver)
+                {
+                    tmrTime.Enabled = false;
+                    _GameEnd();
+                    return;
+                }
+                
+                _InitializeRound();
+                // Clearing and focusing the input improves UX by making it easier for the user to enter the next value
+                mtbNumberRepeted.Clear();
+                mtbNumberRepeted.Focus();
+            }
         }
         private void frmGame_Load(object sender, EventArgs e)
         {
@@ -172,6 +207,5 @@ namespace Repeated_Numbers_UI
             _InitializeRound();
         }
         // End Event Controls
-
     }
 }

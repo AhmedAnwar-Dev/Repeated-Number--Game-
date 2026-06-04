@@ -81,8 +81,6 @@ namespace Repeated_Number_Logic
             currentRound++; // Each time this method is called we advance to the next round
             return isCorrect;
         }
-
-       
         public void RegisterTimeOut()
         {
             timerCountdown = 10;

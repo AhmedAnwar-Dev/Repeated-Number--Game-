@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartGame));
             this.nudRounds = new System.Windows.Forms.NumericUpDown();
             this.btnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -105,10 +106,11 @@
             this.Controls.Add(this.btnPlay);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.MaximizeBox = false;
             this.Name = "frmStartGame";
-            this.Text = "Repeated Numbers Game";
+            this.Text = "Repeated Numbers";
             ((System.ComponentModel.ISupportInitialize)(this.nudRounds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -173,10 +173,11 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmGameEnd";
-            this.Text = "frmGameEnd";
+            this.Text = "End Game";
             this.Load += new System.EventHandler(this.frmGameEnd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
