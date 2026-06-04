@@ -96,6 +96,7 @@
             // 
             // frmStartGame
             // 
+            this.AcceptButton = this.btnPlay;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(211)))), ((int)(((byte)(235)))));

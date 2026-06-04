@@ -168,6 +168,7 @@ namespace Repeated_Numbers_UI
                 {
                     tmrTime.Enabled = true;
                 }
+                _InitializeRound();
             }// If the user submitted an empty value or 0, show an error message
 
             else
